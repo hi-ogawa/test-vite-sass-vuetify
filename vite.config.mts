@@ -10,6 +10,15 @@ import { fileURLToPath, URL } from 'node:url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: "modern-compiler",
+        // api: "modern",
+        // api: "legacy",
+      }
+    }
+  },
   plugins: [
     Vue({
       template: { transformAssetUrls },
