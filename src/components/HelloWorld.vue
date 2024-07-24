@@ -20,6 +20,53 @@
 
       <v-row>
         <v-col cols="12">
+          components:
+          <v-btn>Button</v-btn>
+
+          <v-chip>
+            Chip
+          </v-chip>
+
+          <v-divider></v-divider>
+
+          <v-expansion-panels>
+            <v-expansion-panel
+              title="Title"
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis est labore voluptatibus! Eaque cupiditate minima"
+            >
+            </v-expansion-panel>
+          </v-expansion-panels>
+
+          <v-list lines="one">
+            <v-list-item
+              :title="'Item 1'"
+              subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit"
+            ></v-list-item>
+          </v-list>
+
+          <v-tooltip text="Tooltip">
+            <template v-slot:activator="{ props }">
+              <v-btn v-bind="props">Tooltip</v-btn>
+            </template>
+          </v-tooltip>
+
+
+          <v-bottom-navigation>
+            <v-btn value="recent">
+              <v-icon>mdi-history</v-icon>
+
+              <span>Recent</span>
+            </v-btn>
+          </v-bottom-navigation>
+
+          <v-breadcrumbs :items="['Foo', 'Bar', 'Fizz']"></v-breadcrumbs>
+
+          <v-fab icon="$vuetify"></v-fab>
+        </v-col>
+      </v-row>
+
+      <v-row>
+        <v-col cols="12">
           <v-card
             class="py-4"
             color="surface-variant"
