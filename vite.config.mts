@@ -8,15 +8,21 @@ import ViteFonts from 'unplugin-fonts/vite'
 import { defineConfig } from 'vite'
 import { fileURLToPath, URL } from 'node:url'
 
+const sassOptions = {
+  api: "modern-compiler",
+  // api: "modern",
+  // api: "legacy",
+
+  // https://github.com/sass/dart-sass/issues/2276
+  silenceDeprecations: ['mixed-decls'],
+}
+
 // https://vitejs.dev/config/
 export default defineConfig({
   css: {
     preprocessorOptions: {
-      scss: {
-        api: "modern-compiler",
-        // api: "modern",
-        // api: "legacy",
-      }
+      scss: sassOptions,
+      sass: sassOptions,
     }
   },
   plugins: [
