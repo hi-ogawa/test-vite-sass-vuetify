@@ -9,7 +9,8 @@ import { defineConfig } from 'vite'
 import { fileURLToPath, URL } from 'node:url'
 
 const sassOptions = {
-  api: "modern-compiler",
+  api: process.env.VITE_SASS_API ?? "modern-compiler",
+  // api: "modern-compiler",
   // api: "modern",
   // api: "legacy",
 
